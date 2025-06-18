@@ -1,5 +1,10 @@
 package spring_introduction;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+
 public class Dog implements Pet {
     private String name;
 
@@ -20,9 +25,11 @@ public class Dog implements Pet {
 //            this.name = name;
 //        }
     }
+
     public void init() {
         System.out.println("Class Dog : init method");
     }
+
     public void destroy() {
         System.out.println("Class Dog : destroy method");
 
