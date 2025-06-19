@@ -1,4 +1,4 @@
-package aspect;
+package aop.aspect;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
