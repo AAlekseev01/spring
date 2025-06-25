@@ -2,16 +2,18 @@ package aop;
 
 import org.springframework.stereotype.Component;
 
-@Component ("UniLibrary")
+@Component
 public class UniLibrary {
 
     public void getBook(){
         System.out.println("Мы берем книгу из UniLibrary ");
         System.out.println("------------------------------------------------");
     }
-    public void returnBook() {
+    public String returnBook() {
+        int a = 10/0;
         System.out.println(" Мы возвращаем книгу в UniLibrary");
-        System.out.println("------------------------------------------------");
+        return "Война и мир";
+
 
     }
 
