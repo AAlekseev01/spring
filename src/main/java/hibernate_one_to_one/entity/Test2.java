@@ -1,4 +1,5 @@
-package hibernate_test2.entity;
+package hibernate_one_to_one.entity;
+
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -16,14 +17,14 @@ public class Test2 {
         Session session = null;
         try {
             session = factory.getCurrentSession();
-            Employee employee = new Employee("Misha","Sidorov","HR",850);
-            Detail detail = new Detail("London","9664454567","mishanya@gmail.com");
-
+//            Employee employee = new Employee("Nikolay","Ivanov","HR",850);
+//            Detail detail = new Detail("New-York","2322222","nikolay@gmail.com");
+//
 //            employee.setEmpDetail(detail);
-            detail.setEmployee(employee);
-
+//            detail.setEmployee(employee);
             session.beginTransaction();
-            session.save(employee);
+            Detail detail = session.get(Detail.class, 8);
+            session.delete(detail);
 
             session.getTransaction().commit();
             System.out.println("Done!");
